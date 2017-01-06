@@ -1,5 +1,5 @@
-<!-- css stuff -->
-<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/carlsednaoui/ouibounce/master/test/ouibounce.min.css">
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/kenpeter/my_exit_intent/master/css/style.css">
 
 <!-- o ui bounce -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ouibounce/0.0.12/ouibounce.min.js"></script>
