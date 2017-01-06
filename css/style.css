@@ -8,6 +8,20 @@
 
 #ouibounce-modal .modal {
   display: block;
+  
+  width: 600px;
+  height: 400px;
+  background-color: #f0f1f2;
+  z-index: 1;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  -webkit-animation: popin 0.3s;
+  animation: popin 0.3s;
 }
 
 #ouibounce-modal .modal-title {
