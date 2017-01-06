@@ -1,0 +1,51 @@
+<!-- css -->
+<!-- NOTE, if you update the ./css/style.css, the commit number will change -->
+<!-- you need to grab a new commit number -->
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/kenpeter/my_exit_intent/906355f1ce5cafe12e2cb7399b31a48eb36bc1fd/css/style.css">
+
+<!-- o ui bounce -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ouibounce/0.0.12/ouibounce.min.js"></script>
+
+<!-- o uni bounce modal -->
+<div id="ouibounce-modal">
+  <!-- we need this, it is under layer-->
+  <div class="underlay"></div>
+  
+  <!-- modal -->
+  <div class="modal">
+    <!-- title -->
+    <div class="modal-title">
+      <h3>This is title</h3>
+    </div>
+
+    <!-- body -->
+    <div class="modal-body">
+      <form action="/my_exit_intent/post.json" method="post">
+        <p>Thanks for stoping by.</p>
+        <input type="text" placeholder="you@email.com" name="email" />
+				<input type="hidden" value="api_username" />
+				<input type="hidden" value="api_password" />
+        <input type="submit" value="Subscribe" />
+      </form>
+    </div>
+
+    <!-- footer -->
+    <!-- no thanks, display none-->
+    <div class="modal-footer">
+      <!-- on click -->
+      <!-- get element by id, style display noe-->
+      <p onclick="document.getElementById('ouibounce-modal').style.display = 'none';">no thanks</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // var
+  // _o ui bounce
+  // o ui bounce
+  // document get element by id
+  // get the id ouibounce-modal
+  var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'),{
+    aggressive: true, //Making this true makes ouibounce not to obey "once per visitor" rule
+  });
+</script>
