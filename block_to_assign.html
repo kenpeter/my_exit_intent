@@ -48,4 +48,13 @@
   var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'),{
     aggressive: false, //Making this true makes ouibounce not to obey "once per visitor" rule
   });
+  
+  
+  // scroll to bottom detection
+  jQuery(window).scroll(function() {
+    if(jQuery(window).scrollTop() + jQuery(window).height() > jQuery(document).height() - 50) {
+      _ouibounce.fire();
+      console.log("near bottom!");
+    }
+  });
 </script>
