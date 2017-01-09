@@ -3,6 +3,8 @@
   <head>
     <title>Exit Intent</title>
 
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+
     <!-- css stuff -->
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/carlsednaoui/ouibounce/master/test/ouibounce.min.css">
     
@@ -77,6 +79,7 @@ Donec iaculis fermentum commodo. Vestibulum purus ipsum, convallis quis suscipit
     </div>
   </div>
 
+  <!-- modal -->
   <script>
     // var
     // _o ui bounce
@@ -84,8 +87,20 @@ Donec iaculis fermentum commodo. Vestibulum purus ipsum, convallis quis suscipit
     // document get element by id
     // get the id ouibounce-modal
     var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'),{
-      aggressive: true, //Making this true makes ouibounce not to obey "once per visitor" rule
+      aggressive: false, //Making this true makes ouibounce not to obey "once per visitor" rule
+    });
+
+
+    // scroll to bottom detection
+    $(window).scroll(function() {
+      if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+        _ouibounce.fire();
+        _ouibounce.disable();
+        console.log("near bottom!");
+      }
     });
   </script>
+  
+  
   </body>
 </html>
